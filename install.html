@@ -1,0 +1,168 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (X11; U; Linux 2.4.2-2 i686) [Netscape]">
+   <title>Installing DHCPStatus</title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+
+<center>
+<h1>
+Installing DHCPStatus.</h1></center>
+
+<p><br>This file outlines the process for installing DHCPStatus. If you
+run into problems, or have any questions, feel free to email me at
+<a
+href="mailto:mjtg@users.sourceforge.net?Subject=[DHCPStatus]:">mjtg@users.sourceforge.net</a>, and I'll do my best to help.
+<p>Logically, DHCPStatus consists of two major components:
+<blockquote>
+<li>
+a <b>library of modules</b> that read the dhcpd.conf and dhcpd.leases files
+and correlate the information in them, and</li>
+
+<li>
+one or more <b>user-interface scripts</b>.</li>
+</blockquote>
+
+<p><br>When the user runs one of these, it calls the appropriate library
+modules to generate the information, then the script formats the output
+in a manner that suits the way the script has been called.
+<p>DHCPStatus is designed this way to separate the data correlation code
+from the user interface code.
+<p>At the moment, there are two user interface scripts - a CGI script and
+a command-line script. I hope to add other interfaces/displays as time
+goes by (Perl/Tk, curses, XML, ...), just for variety.
+<p>To install DHCPStatus, you'll first need to install the library of modules,
+then install the script(s) for the user interface(s) that you wish to use
+to call DHCPStatus.
+<br>&nbsp;
+<h2>
+Installing the library of modules.</h2>
+For the purposes of this exercise, we're going to install them in <b>/usr/local/dhcpstatus</b>.
+However, you can install the libraries in any
+<br>directory you wish - simply modify the instructions below accordingly.
+<p>1. Un-zip and un-tar the DHCPStatus distribution file somewhere (you
+may have already done this):
+<blockquote><tt>% gzip -dc dhcpstatus_x.xx.tar.gz | tar -xvf -</tt></blockquote>
+
+<p><br>This will create a distribution directory called dhcpstatus_x.xx,
+where the x's are version numbers.
+<p>2. Create your library directory:
+<blockquote><tt>% mkdir /usr/local/dhcpstatus</tt></blockquote>
+
+<p><br>3. cd into the library directory:
+<blockquote><tt>% cd /usr/local/dhcpstatus</tt></blockquote>
+
+<p><br>4. Un-tar the library tar-file in the distribution directory:
+<blockquote><tt>% tar -xvf /path/to/dhcpstatus_x.xx/libraries.tar</tt></blockquote>
+
+<p><br>This will create a sub-directory called dhcpstatus in the directory
+that you're in. It will also create a file called dhcpstatus.ini.
+<p>So, there should now be a directory:
+<blockquote>
+<li>
+/usr/local/dhcpstatus</li>
+</blockquote>
+
+<p><br>with library modules:
+<blockquote>
+<li>
+/usr/local/dhcpstatus/dhcpstatus/*.pm</li>
+</blockquote>
+
+<p><br>and a .ini file:
+<blockquote>
+<li>
+/usr/local/dhcpstatus/dhcpstatus.ini</li>
+</blockquote>
+
+<p><br>5. Edit the dhcpstatus.ini file. It contains some parameters that
+affect the behaviour of DHCPStatus. Perhaps the most important of these
+parameters is the location of your dhcpd.conf and dhcpd.leases files.
+<br>&nbsp;
+<h2>
+Installing the user interface scripts.</h2>
+As mentioned above, there are currently two user interfaces to DHCPStatus
+- CGI and command line. You can install either one or both of these, its
+up to you (obviously you need to install at least one of them, or else
+you're wasting your time here ...).
+<p>In the un-tar'd distribution directory (/path/to/dhcpstatus_x.xx) ,
+there's a scripts sub-directory that contains two files:
+<blockquote>
+<li>
+<b>dhcpstatus.cgi</b>: a CGI script that generates HTML</li>
+
+<li>
+<b>dhcpstatus</b>: a command-line script that generates text.</li>
+</blockquote>
+
+<p><br>If you want to use the CGI script interface to access DHCPStatus
+through your web browser, then simply copy it to your web server's cgi-bin
+directory, eg.
+<blockquote><tt>% cp /path/to/dhcpstatus_x.xx/scripts/dhcpstatus.cgi /path/to/cgi-bin</tt></blockquote>
+
+<p><br>Similarly, if you want to use the command-line version of dhcpstatus,
+then copy that script to a directory somewhere in your path, eg:
+<blockquote><tt>% cp /path/to/dhcpstatus_x.xx/scripts/dhcpstatus /usr/local/bin</tt></blockquote>
+
+<p><br>For each script that you've copied, you'll need to edit that file
+to make sure the following are correct for your machine:
+<blockquote>
+<li>
+the first line in the script points to the location of your Perl binary,</li>
+
+<li>
+the directory pointed to by the "use lib" statement (a few lines into thescript)
+is the directory containing your libraries and .ini file.</li>
+</blockquote>
+
+<p><br>For example:
+<blockquote><tt>#!/usr/bin/perl -w</tt>
+<br><tt># ...</tt><tt></tt>
+<p><tt>use lib "/usr/local/dhcpstatus";</tt></blockquote>
+<p><br>
+
+<h2>
+Location comments.</h2>
+DHCPStatus will display comments embedded in the dhcpd.conf file for each subnet.  This is especially useful if you have a large number of subnets.
+<p>Location information for subnets is entered in the .conf file as a
+comment starting with the characters "#$" as the first two characters in
+a line. Location comments can appear either in front of or in the
+middle of a subnet definition.
+<p>
+Here are a couple of examples:
+<blockquote><tt>#$ Ground floor subnet</tt><br>
+<tt>subnet 10.1.1.0 netmask 255.255.255.0 {</tt>
+<div style="margin-left: 40px;"><tt>...</tt></div>
+<div style="margin-left: 40px;"><tt>range 10.1.1.30 10.1.1.100;</tt></div>
+<tt>}</tt></br>
+</br>
+<tt>subnet 10.1.2.0 netmask 255.255.255.0 {</tt><br>
+<tt>#$ First floor subnet</tt><br>
+<div style="margin-left: 40px;"><tt>...</tt></div>
+<div style="margin-left: 40px;"><tt>range 10.1.2.25 10.1.2.150;</tt></div>
+<tt>}</tt><br>
+</blockquote>
+<p><br>
+
+<h2>
+Running DHCPStatus.</h2>
+Once you have installed DHCPStatus, running it is fairly straight-forward.
+For the CGI interface, simply point your web browser at
+<blockquote>http://your.dhcpd.server/cgi-bin/dhcpstatus.cgi</blockquote>
+
+<p><br>(or whatever the correct URL is). The command-line version can be
+run simply by typing
+<blockquote><tt>% dhcpstatus</tt></blockquote>
+
+<p><br>at the command prompt. This will print out a summary of your DHCPD
+environment. For a more detailed report on a particular subnet, type:
+<blockquote><tt>% dhcpstatus -s &lt;subnet-id></tt></blockquote>
+
+<p><br>eg.
+<blockquote><tt>% dhcpstatus -s 123.45.67.0</tt></blockquote>
+
+<p>Enjoy !!!
+</body>
+</html>

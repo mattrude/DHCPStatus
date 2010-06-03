@@ -1,0 +1,232 @@
+[localhost]$ dhcpstatus -s 192.62.4.64
+DHCP Subnet Information: IFC - Glenorchy
+
+Subnet:         192.62.4.64
+Netmask:        255.255.255.192
+Broadcast:      192.62.4.127
+Router:         192.62.4.126
+DNS servers:    192.62.11.156, 192.62.130.13
+WINS servers:   192.62.10.39, 192.62.10.40
+IP range:       192.62.4.65 - 192.62.4.126
+
+IP address: 192.62.4.65
+
+IP address: 192.62.4.66
+
+IP address: 192.62.4.67
+
+IP address: 192.62.4.68
+
+IP address: 192.62.4.69
+
+IP address: 192.62.4.70
+
+IP address: 192.62.4.71
+
+IP address: 192.62.4.72    Lease status: Active
+Lease start: 07/11/2000 07:43:12    Lease end: 21/11/2000 07:43:12
+Mac address: 00:80:5f:f7:d9:52    DNS name: infna72.ifc.tas.gov.au
+WINS name: 9906000IFC9006
+
+IP address: 192.62.4.73    Lease status: Active
+Lease start: 07/11/2000 09:07:11    Lease end: 21/11/2000 09:07:11
+Mac address: 00:80:7c:f1:b0:ec    DNS name: infna73.ifc.tas.gov.au
+
+IP address: 192.62.4.74    Lease status: Active
+Lease start: 07/11/2000 13:59:44    Lease end: 21/11/2000 13:59:44
+Mac address: 00:50:8b:54:e2:31    DNS name: infna74.ifc.tas.gov.au
+WINS name: 0001018IFCGIFC
+
+IP address: 192.62.4.75    Lease status: Free
+
+IP address: 192.62.4.76    Lease status: Active
+Lease start: 07/11/2000 09:32:57    Lease end: 21/11/2000 09:32:57
+Mac address: 00:50:8b:54:dd:40    DNS name: infna76.ifc.tas.gov.au
+WINS name: 0001015IFCGIFC
+
+IP address: 192.62.4.77    Lease status: Free
+
+IP address: 192.62.4.78
+
+IP address: 192.62.4.79
+
+IP address: 192.62.4.80    Lease status: Active
+Lease start: 07/11/2000 08:45:10    Lease end: 21/11/2000 08:45:10
+Mac address: 00:50:8b:54:d9:c3    DNS name: infna80.ifc.tas.gov.au
+WINS name: 0001017IFCGIFC
+
+IP address: 192.62.4.81    Lease status: Free
+
+IP address: 192.62.4.82    Lease status: Free
+
+IP address: 192.62.4.83    Lease status: Active
+Lease start: 07/11/2000 08:49:46    Lease end: 21/11/2000 08:49:46
+Mac address: 00:50:8b:ab:4b:dc    DNS name: infna83.ifc.tas.gov.au
+WINS name: 0001021IFCGIFC
+
+IP address: 192.62.4.84    Lease status: Active
+Lease start: 07/11/2000 08:31:58    Lease end: 21/11/2000 08:31:58
+Mac address: 00:50:8b:62:24:b3    DNS name: infna84.ifc.tas.gov.au
+WINS name: 0005051ifc00ifc
+
+IP address: 192.62.4.85    Lease status: Active
+Lease start: 07/11/2000 08:32:00    Lease end: 21/11/2000 08:32:00
+Mac address: 00:d0:b7:23:81:a0    DNS name: infna85.ifc.tas.gov.au
+WINS name: 0005052ifc00ifc
+
+IP address: 192.62.4.86    Lease status: Free
+
+IP address: 192.62.4.87    Lease status: Free
+
+IP address: 192.62.4.88    Lease status: Free
+
+IP address: 192.62.4.89    Lease status: Free
+
+IP address: 192.62.4.90    Lease status: Free
+
+IP address: 192.62.4.91    Lease status: Free
+
+IP address: 192.62.4.92    Lease status: Active
+Lease start: 06/11/2000 16:12:54    Lease end: 20/11/2000 16:12:54
+Mac address: 00:08:c7:c9:b6:56    DNS name: infna92.ifc.tas.gov.au
+WINS name: 0001014IFCGIFC
+
+IP address: 192.62.4.93    Lease status: Free
+
+IP address: 192.62.4.94    Lease status: Active
+Lease start: 06/11/2000 07:10:36    Lease end: 20/11/2000 07:10:36
+Mac address: 00:50:8b:54:e1:b1    DNS name: infna94.ifc.tas.gov.au
+WINS name: 0001016IFCGIFC
+
+IP address: 192.62.4.95    Lease status: Free
+
+IP address: 192.62.4.96    Lease status: Free
+
+IP address: 192.62.4.97    Lease status: Active
+Lease start: 07/11/2000 07:26:22    Lease end: 21/11/2000 07:26:22
+Mac address: 00:80:5f:f7:d9:8f    DNS name: infna97.ifc.tas.gov.au
+WINS name: 9906000IFC9013
+
+IP address: 192.62.4.98    Lease status: Active
+Lease start: 06/11/2000 09:00:03    Lease end: 20/11/2000 09:00:03
+Mac address: 00:80:5f:f7:d8:d5    DNS name: infna98.ifc.tas.gov.au
+WINS name: 9906000IFC9011
+
+IP address: 192.62.4.99    Lease status: Active
+Lease start: 07/11/2000 08:59:30    Lease end: 21/11/2000 08:59:30
+Mac address: 00:80:5f:f7:d9:31    DNS name: infna99.ifc.tas.gov.au
+WINS name: 9906000IFC9001
+
+IP address: 192.62.4.100    Lease status: Active
+Lease start: 27/10/2000 13:05:03    Lease end: 10/11/2000 13:05:03
+Mac address: 00:80:5f:f7:d9:12    DNS name: infna100.ifc.tas.gov.au
+WINS name: 9906000IFC9002
+
+IP address: 192.62.4.101    Lease status: Active
+Lease start: 02/11/2000 08:52:12    Lease end: 16/11/2000 08:52:12
+Mac address: 00:80:5f:f7:d9:49    DNS name: infna101.ifc.tas.gov.au
+WINS name: 9906000IFC9003
+
+IP address: 192.62.4.102    Lease status: Active
+Lease start: 07/11/2000 08:55:39    Lease end: 21/11/2000 08:55:39
+Mac address: 00:08:c7:c9:a6:3b    DNS name: infna102.ifc.tas.gov.au
+WINS name: 0001013IFCGIFC
+
+IP address: 192.62.4.103    Lease status: Active
+Lease start: 07/11/2000 08:40:38    Lease end: 21/11/2000 08:40:38
+Mac address: 00:80:5f:f7:d9:4a    DNS name: infna103.ifc.tas.gov.au
+WINS name: 9906000IFC9007
+
+IP address: 192.62.4.104    Lease status: Active
+Lease start: 07/11/2000 09:14:06    Lease end: 21/11/2000 09:14:06
+Mac address: 00:80:5f:f7:f1:a8    DNS name: infna104.ifc.tas.gov.au
+WINS name: 9906000IFC9005
+
+IP address: 192.62.4.105    Lease status: Active
+Lease start: 07/11/2000 10:03:22    Lease end: 21/11/2000 10:03:22
+Mac address: 00:08:c7:c9:a6:46    DNS name: infna105.ifc.tas.gov.au
+WINS name: 0001012IFCGIFC
+
+IP address: 192.62.4.106    Lease status: Active
+Lease start: 07/11/2000 09:07:33    Lease end: 21/11/2000 09:07:33
+Mac address: 00:80:5f:f7:d9:a2    DNS name: infna106.ifc.tas.gov.au
+WINS name: 9906009ifcgifc
+
+IP address: 192.62.4.107    Lease status: Active
+Lease start: 07/11/2000 11:00:02    Lease end: 21/11/2000 11:00:02
+Mac address: 00:80:5f:f7:d9:13    DNS name: infna107.ifc.tas.gov.au
+WINS name: 9906000IFC9004
+
+IP address: 192.62.4.108    Lease status: Active
+Lease start: 07/11/2000 08:56:38    Lease end: 21/11/2000 08:56:38
+Mac address: 00:80:5f:f7:d9:14    DNS name: infna108.ifc.tas.gov.au
+WINS name: 9906000IFC9008
+
+IP address: 192.62.4.109    Lease status: Active
+Lease start: 06/11/2000 08:37:11    Lease end: 20/11/2000 08:37:11
+Mac address: 00:80:5f:f7:d9:1b    DNS name: infna109.ifc.tas.gov.au
+WINS name: 9906000IFC9XXX
+
+IP address: 192.62.4.110    Lease status: Active
+Lease start: 02/11/2000 13:31:30    Lease end: 16/11/2000 13:31:30
+Mac address: 00:10:a4:f4:fc:16    DNS name: infna110.ifc.tas.gov.au
+
+IP address: 192.62.4.111    Lease status: Active
+Lease start: 07/11/2000 10:38:54    Lease end: 21/11/2000 10:38:54
+Mac address: 00:08:c7:c9:b5:8e    DNS name: infna111.ifc.tas.gov.au
+WINS name: 0001010IFCGIFC
+
+IP address: 192.62.4.112    Lease status: Active
+Lease start: 06/11/2000 09:06:59    Lease end: 20/11/2000 09:06:59
+Mac address: 00:80:5f:f7:d9:b4    DNS name: infna112.ifc.tas.gov.au
+WINS name: 9906000IFC9012
+
+IP address: 192.62.4.113    Lease status: Active
+Lease start: 03/11/2000 09:46:38    Lease end: 17/11/2000 09:46:38
+Mac address: 00:a0:c9:c9:34:60    DNS name: infna113.ifc.tas.gov.au
+
+IP address: 192.62.4.114    Lease status: Active
+Lease start: 07/11/2000 08:30:19    Lease end: 21/11/2000 08:30:19
+Mac address: 00:a0:c9:b1:a1:3a    DNS name: infna114.ifc.tas.gov.au
+WINS name: INF_old_DP2000
+
+IP address: 192.62.4.115    Lease status: Active
+Lease start: 03/11/2000 08:30:45    Lease end: 17/11/2000 08:30:45
+Mac address: 00:50:8b:0e:0b:0d    DNS name: infna115.ifc.tas.gov.au
+WINS name: 9906000IFC9014
+
+IP address: 192.62.4.116    Lease status: Active
+Lease start: 06/11/2000 09:00:35    Lease end: 20/11/2000 09:00:35
+Mac address: 00:50:8b:0e:0b:de    DNS name: infna116.ifc.tas.gov.au
+WINS name: 9908000IFC9158
+
+IP address: 192.62.4.117    Lease status: Active
+Lease start: 06/11/2000 08:41:24    Lease end: 20/11/2000 08:41:24
+Mac address: 00:08:c7:c9:c7:32    DNS name: infna117.ifc.tas.gov.au
+WINS name: 0001006IFCGIFC
+
+IP address: 192.62.4.118    Lease status: Active
+Lease start: 27/10/2000 09:01:09    Lease end: 10/11/2000 09:01:09
+Mac address: 00:50:8b:0e:09:c9    DNS name: infna118.ifc.tas.gov.au
+WINS name: 9908005IFCGIFC
+
+IP address: 192.62.4.119    Lease status: Active
+Lease start: 07/11/2000 08:51:50    Lease end: 21/11/2000 08:51:50
+Mac address: 00:08:c7:c9:c7:48    DNS name: infna119.ifc.tas.gov.au
+WINS name: 0001007IFCGIFC
+
+IP address: 192.62.4.120    Lease status: Free
+
+IP address: 192.62.4.121
+
+IP address: 192.62.4.122
+
+IP address: 192.62.4.123
+
+IP address: 192.62.4.124
+
+IP address: 192.62.4.125
+
+IP address: 192.62.4.126
+
+[localhost]$

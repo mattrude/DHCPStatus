@@ -1,80 +1,311 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-	<title>mattrude/DHCPStatus @ GitHub</title>
-	
-	<style type="text/css">
-		body {
-  		margin-top: 1.0em;
-  		background-color: #2d138b;
-		  font-family: "Helvetica,Arial,FreeSans";
-  		color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-		h1 { font-size: 3.8em; color: #d2ec74; margin-bottom: 3px; }
-		h1 .small { font-size: 0.4em; }
-		h1 a { text-decoration: none }
-		h2 { font-size: 1.5em; color: #d2ec74; }
-    h3 { text-align: center; color: #d2ec74; }
-    a { color: #d2ec74; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-		pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-	</style>
-	
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <title>DHCPStatus</title>
 </head>
+<body bgcolor="#FFFFFF">
 
-<body>
-  <a href="http://github.com/mattrude/DHCPStatus"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+<div align=right><i>Version 0.60<br>7 October 2001</i></div>
 
-  <div id="container">
+<center>
+<h1>
+DHCPStatus</h1></center>
 
-    <div class="download">
-      <a href="http://github.com/mattrude/DHCPStatus/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/mattrude/DHCPStatus/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
+<ul>
+<li>
+<a href="#what">What is <i>DHCPStatus</i> ?</a></li>
 
-    <h1><a href="http://github.com/mattrude/DHCPStatus">DHCPStatus</a>
-      <span class="small">by <a href="http://github.com/mattrude">mattrude</a></span></h1>
+<li>
+<a href="#info">What information does <i>DHCPStatus</i> give you ?</a></li>
 
-    <div class="description">
-      DHCPStatus is a query tool for browsing information stored in DHCPD's configuration and leases files.
-    </div>
+<li>
+<a href="#look">What does it look like ?</a></li>
 
-    <h2>Authors</h2>
-<p>Matt Rude (m@mattrude.com)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Matt Rude (github@mattrude.com)<br/>      </p>
+<li>
+<a href="#require">Requirements</a></li>
 
+<li>
+<a href="#download">Where can I download <i>DHCPStatus</i> from ?</a></li>
 
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/mattrude/DHCPStatus/zipball/master">zip</a> or
-      <a href="http://github.com/mattrude/DHCPStatus/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/mattrude/DHCPStatus</pre>
-    </p>
+<li>
+<a href="#install">Installation</a></li>
 
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/mattrude/DHCPStatus">mattrude/DHCPStatus</a>
-    </div>
+<li>
+<a href="#good">What's good about <i>DHCPStatus</i> ?</a></li>
 
-  </div>
+<li>
+<a href="#limits">What are its limitations ?</a></li>
 
-  
+<li>
+<a href="#dhcpd3">Support for DHCPD V3.0 file formats</a></li>
+
+<li>
+<a href="#legalstuff">License</a></li>
+
+<li>
+<a href="#othergoodstuff">Related Software</a></li>
+
+<li>
+<a href="#author">The Author</a></li>
+</ul>
+
+<h2>
+<a NAME="what"></a>What is <i>DHCPStatus</i> ?</h2>
+<i>DHCPStatus</i> is a query tool for browsing information stored in DHCPD's
+configuration and leases files, <b>dhcpd.conf</b> and <b>dhcpd.leases</b>.
+It correlates the subnet details that you configure in the conf file with
+the lease records that DHCPD maintains in its lease file. You can thus
+obtain an overall picture of your DHCP environment, as well as view details
+of individual leases for each IP.
+<p><a href="http://www.isc.org/products/DHCP">DHCPD</a>, by the way, is
+a DHCP server daemon, produced by the <a href="http://www.isc.org/">Internet
+Software Consortium.</a>
+<p><i>DHCPStatus</i> can be run either as a CGI script and viewed via a
+web browser, or as a command-line tool that generates simple text output.&nbsp;
+The CGI/web interface requires that you run a CGI-capable web server on
+your DHCPD server machine.&nbsp; The command-line tool merely requires
+that you have a shell login on the server.
+<h2>
+<a NAME="info"></a>What information does <i>DHCPStatus</i> give you ?</h2>
+
+<div STYLE="margin-bottom: 0in"><i>DHCPStatus</i> provides information
+about your DHCPD environment at two levels: an overall summary report,
+and a subnet detail report.
+<br>&nbsp;
+<h4>
+Summary report</h4>
+Each row of the summary report contains information for a single subnet
+defined in the dhcpd.conf file.&nbsp; The information described for each
+subnet is:
+<ul>
+<li>
+the subnet address,</li>
+
+<li>
+netmask,</li>
+
+<li>
+the range of IP addresses that fall within the subnet,</li>
+
+<li>
+the router(s) for the subnet,</li>
+
+<li>
+the number of IP addresses that are defined in the dynamic pool for that
+subnet,</li>
+
+<li>
+the number of IP addresses in the dynamic pool that are in use, and</li>
+
+<li>
+the number of IP addresses in the dynamic pool that are free.</li>
+</ul>
+</div>
+
+<div STYLE="margin-bottom: 0in">All this information is obtained from the
+dhcpd.conf and dhcpd.leases files, in their standard formats. In addition,
+if you use an extra format standard for commenting each subnet in your
+dhcpd.conf file, this utility will find those comments and include them
+as a "Location" field in the summary report.</div>
+
+<h4>
+Subnet detail report</h4>
+For each subnet that is summarised by the summary report, it is possible
+to obtained a detailed subnet report.
+<p>The information displayed in the subnet detail report includes all of
+the information that is produced by the summary report for that subnet,
+as well as a row of information on each IP address in the subnet. The information
+for each IP address includes the lease status ("active", "free", or blank
+for IP addresses not in the dynamic pool).
+<br>&nbsp;
+<div STYLE="margin-bottom: 0in">For each active address, the following
+is displayed:
+<blockquote>
+<li>
+the start date of the lease,</li>
+
+<li>
+the end date of the lease,</li>
+
+<li>
+the mac address of the interface that has the IP address lease,</li>
+
+<li>
+the DNS name of the interface that has the lease (as supplied by the client),
+and</li>
+
+<li>
+the hostname (or WINS name, assuming the client is using WINS) of the machine
+that has the lease.</li>
+</blockquote>
+</div>
+
+<div STYLE="margin-bottom: 0in">Overall, these two reports provide a quick
+and easy way of summarising the status of your DHCPD server (a lot easier
+than scanning through the <b>dhcpd.leases</b> file manually :-)</div>
+
+<h2>
+<a NAME="look"></a>What does it look like ?</h2>
+Here's what <a href="dhcpstatus_summary.html">HTML</a> and <a href="dhcpstatus_summary.txt">text</a>
+versions of the summary report look like.
+<p>And here are <a href="dhcpstatus_detail.html">HTML</a> and <a href="dhcpstatus_detail.txt">text</a>
+versions of the detail report.
+<h2>
+<a NAME="require"></a>Requirements</h2>
+
+<div STYLE="margin-bottom: 0in">If you want to use <i>DHCPStatus</i>, you'll
+firstly need read access to your dhcpd.conf and dhcpd.leases files.&nbsp;
+You'll also require Perl 5.003 (or later) installed on your system.
+<p>If you choose to run the CGI/web interface with <i>DHCPStatus</i>, then
+you'll need to run a web server on your DHCPD server.&nbsp; The userid
+that the web server runs as will need read access to your dhcpd.conf and
+dhcpd.leases files.&nbsp;&nbsp; Alternatively, if you want to use the web
+interface but don't want to install a web server on your DHCPD server,
+then you could run the CGI script from another machine that had access
+to the dhcpd.conf and dhcpd.leases files via, say, an NFS mount.
+<p>There are no pre-requisites for the command-line interface to <i>DHCPStatus</i>
+(other than, obviously, Perl and read access to your DHCPD files).&nbsp;
+The command-line version assumes that your terminal display width is 80
+characters (you can easily change this width value in a .ini file).&nbsp;
+However, if you have the Perl Term::ReadKey package installed on your system,
+<i>DHCPStatus</i> will use it to determine your screen width (see <a href="http://search.cpan.org/search?dist=TermReadKey">http://search.cpan.org/search?dist=TermReadKey</a>).</div>
+
+<h2>
+<a NAME="download"></a>Where can I download <i>DHCPStatus</i> from ?</h2>
+
+<div STYLE="margin-bottom: 0in">Right <a
+href="http://github.com/mattrude/DHCPStatus/tarball/master">HERE</a>
+!!!</div>
+
+<h2>
+<a NAME="install"></a>Installation</h2>
+
+<div STYLE="margin-bottom: 0in">See the <a href="install.html">INSTALL</a>
+file.</div>
+
+<h2>
+<a NAME="good"></a>What's good about <i>DHCPStatus</i> ?</h2>
+As mentioned above, <i>DHCPStatus</i> allows you to view everything you
+want to know about your DHCP leases with a couple of mouse clicks of your
+web browser, or by calling a command from a shell prompt. At a glance,
+you can tell how many IP addresses are in the DHCPD pool for each of your
+subnets, how many free addresses you have, and who has taken the leases.
+<p>Also, <i>DHCPStatus</i> is fairly fast - on my (well, my employer's)
+Sun Ultra 450, it parses though the <b>dhcpd.conf</b> and <b>dhcpd.leases</b>
+files, containing around 1300 leases, in about 2 seconds.
+<p>And, its fairly easy to install.
+<h2>
+<a NAME="limits"></a>What are its limitations ?</h2>
+
+<div STYLE="margin-bottom: 0in">At present, <i>DHCPStatus</i> only reports
+on the dynamic component of DHCP, ie. the dynamic pool of IP addresses
+defined by the "range" statements in each "subnet" statement in <b>dhcpd.conf</b>.
+Information in "group" and "host" statements is ignored. The reason for
+this is that I wrote these scripts to keep track of where all my dynamic
+IP addresses were going, and how many I had free - I already knew about
+the static stuff. However, I plan to add info about groups and hosts soon
+- it will make <i>DHCPStatus</i> more useful.</div>
+
+<div STYLE="margin-bottom: 0in">Also, things like bootp parameters are
+ignored. If we were using DHCP for bootp here where I work, I'd add it
+in, but we don't. I might add bootp information in some time.</div>
+
+<div STYLE="margin-bottom: 0in"><i>DHCPStatus</i> assumes that your <b>dhcpd.conf</b>
+and <b>dhcpd.leases</b> files contain the correct syntax. If they don't,
+you'll either get an "internal server error" from your web server as the
+CGI script goes off the rails trying to parse the error, or (less likely,
+I think I've taken care this), the scripts will go into an infinite loop,
+your browser will hang, and you'll probably have a web server process spinning
+its wheels on the server. I didn't put too much effort into checking syntax,
+since I figured that&nbsp;<span STYLE="font-style: normal">a)</span> DHCPD
+probably won't run if&nbsp;<span STYLE="font-style: normal"><b>dhcpd.conf</span></b>
+has a syntax error, and&nbsp;<span STYLE="font-style: normal">b)</span>
+you're in real strife if your&nbsp;<span STYLE="font-style: normal"><b>dhcpd.leases</span></b>
+file has a syntax error.
+<p>There's also a problem with options and parameters within a "pool" statement
+in DHCPD V3.0 <b>dhcpd.conf</b> files not being displayed (see <a href="#pools">below</a>).</div>
+
+<h2 STYLE="margin-bottom: 0in">
+<a NAME="dhcpd3"></a>Support for DHCPD V3.0 file formats</h2>
+
+<div STYLE="margin-bottom: 0in">The <a href="http://www.isc.org/products/DHCP/dhcp-v3.html">DHCPD
+3.0 server</a> introduces a lot of new features that weren't present in
+2.0 (server failover, conditional behaviour, DDNS, and other good stuff).&nbsp;
+As a result, the syntax of the <b>dhcpd.conf</b> and <b>dhcpd.leases</b>
+files has been extended.</div>
+
+<div STYLE="margin-bottom: 0in">&nbsp;
+<br><i>DHCPStatus</i> V0.53 will work with DHCPD V3.0 file formats (or
+at least it has as far as I've tested it).&nbsp; That doesn't mean that
+<i>DHCPStatus</i>
+will display any of the new features, it just means that at least it won't
+crash on you with a syntax error.&nbsp; Versions of <i>DHCPStatus</i> prior
+to V0.54 will only work with 2.0 and earlier releases of DHCPD (ie. they'll
+most likely crash if you run them against DHCPD V3.0 files).
+<p><a NAME="pools"></a>One slight problem is introduced with the <b>dhcpd.conf
+</b>V3.0
+file format.&nbsp; Up till DHCPD V2.0, network parameters and options (eg.
+<i>dns
+server</i>, <i>wins server, broadcast address</i>) could only be defined
+globally or at a subnet level.&nbsp; As of DHCPD V3.0, it is possible to
+define <i>pools</i> of addresses within a subnet, and specify options for
+each pool.&nbsp; <i>DHCPStatus</i> doesn't recognise option definitions
+within "pool" statements (yet), it ignores them.&nbsp; So, if you use pools
+under DHCPD V3.0, be aware that the options that are displayed in <i>DHCPStatus</i>
+for a particular subnet might be over-ridden by options at the pool level.&nbsp;
+If you don't use DHCPD V3.0 with options inside "pool" statements, you
+don't have to worry about any of this.&nbsp; One day I might fix it.</div>
+
+<hr>
+<h2>
+<a NAME="legalstuff"></a>License</h2>
+
+<div STYLE="margin-bottom: 0in">This product is freely available under
+the terms of the <a href="http://www.gnu.org/copyleft/gpl.html">GNU General
+Public License.</a> However, if you find this product useful and wish to
+offer appreciation for it, then please make a contribution to your local
+animal welfare society.</div>
+
+<p><br>
+<hr>
+<h2>
+<a NAME="othergoodstuff"></a>Related software</h2>
+<i>DHCPStatus</i> correlates the information in your <b>dhcpd.conf</b>
+and <b>dhcpd.leases</b> files, and displays it in an easy-to-read tabular
+format. The following programs also allow you to view DHCPD information:
+<ul>
+<li>
+<a href="http://lanlord.sourceforge.net/">Lanlord</a> is a DHCP lease tracker
+designed to run as a CGI program, written in Python. It lists all the entries
+in the <b>dhcpd.leases</b> file in a tabular format.</li>
+
+<li>
+<a href="http://www.ujep.cz/~lupomesk/dhcplst/">dhcplst.pl</a> is a CGI
+program to browse and/or query dhcpd leases files.</li>
+
+<li>
+<a href="http://wormhole.anchorageak.net/FindHosts/">Findhosts</a> is another
+CGI program, it lets you search for IP/MAC addresses in your dhcpd log
+file.</li>
+</ul>
+
+<hr>
+<h2>
+<a NAME="author"></a>The Author</h2>
+<i>DHCPStatus</i> was written by Michael Grubits. Please send all criticism/praise/patches/change
+requests/offers of telecommuting employment/etc. to
+<a href="mailto:mjtg@users.sourceforge.net?Subject=[DHCPStatus]:">mjtg@users.sourceforge.net</a>.
+<br>&nbsp;
+<p><!-- footer table -->
+<table BORDER=0 CELLSPACING=0 CELLPADDING=2 WIDTH="100%" BGCOLOR="#737B9C" >
+<tr>
+<td ALIGN=CENTER><span class="titlebar"><font color="#FFFFFF">All trademarks
+and copyrights on this page are properties of their respective owners.
+Forum comments are owned by the poster. The rest is copyright &copy;1999-2000
+VA Linux Systems, Inc.</font></span></td>
+</tr>
+</table>
+<!-- end footer table -->
 </body>
 </html>

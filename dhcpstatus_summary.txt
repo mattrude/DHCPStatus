@@ -1,0 +1,169 @@
+[localhost]$ dhcpstatus
+DHCP Subnet Information
+
+Location: IFC - Glenorchy    Subnet: 10.1.4.64    Netmask: 255.255.255.192
+IP range: 10.1.4.65 - 10.1.4.126    Router: 10.1.4.126    IPs defined: 47
+IPs used: 33    IPs free: 14
+
+Location: TGIO    Subnet: 10.1.4.128    Netmask: 255.255.255.192
+IP range: 10.1.4.129 - 10.1.4.190    Router: 10.1.4.190    IPs defined: 30
+IPs used: 4    IPs free: 26
+
+Location: Servtas - Devonport    Subnet: 10.1.5.64    Netmask: 255.255.255.224
+IP range: 10.1.5.65 - 10.1.5.94    Router: 10.1.5.94    IPs defined: 10
+IPs used: 8    IPs free: 2
+
+Location: Servtas - Burnie - Reece House    Subnet: 10.1.5.96
+Netmask: 255.255.255.224    IP range: 10.1.5.97 - 10.1.5.126
+Router: 10.1.5.126    IPs defined: 15    IPs used: 5    IPs free: 10
+
+Location: Servtas - Glenorchy    Subnet: 10.1.5.160    Netmask: 255.255.255.224
+IP range: 10.1.5.161 - 10.1.5.190    Router: 10.1.5.190    IPs defined: 15
+IPs used: 1    IPs free: 14
+
+Location: Ulverstone - Short Street    Subnet: 10.1.6.192
+Netmask: 255.255.255.192    IP range: 10.1.6.193 - 10.1.6.254
+Router: 10.1.6.254    IPs defined: 15    IPs used: 2    IPs free: 13
+
+Location: Servtas - Ground Floor Lands Building    Subnet: 10.1.7.128
+Netmask: 255.255.255.128    IP range: 10.1.7.129 - 10.1.7.254
+Router: 10.1.7.254    IPs defined: 57    IPs used: 26    IPs free: 31
+
+Location: 1st Floor Lands Building    Subnet: 10.1.7.0
+Netmask: 255.255.255.128    IP range: 10.1.7.1 - 10.1.7.126
+Router: 10.1.7.126    IPs defined: 38    IPs used: 34    IPs free: 4
+
+Location: 2nd Floor Lands Building    Subnet: 10.1.8.128
+Netmask: 255.255.255.128    IP range: 10.1.8.129 - 10.1.8.254
+Router: 10.1.8.254    IPs defined: 37    IPs used: 27    IPs free: 10
+
+Location: 3rd Floor Lands Building    Subnet: 10.1.8.0
+Netmask: 255.255.255.128    IP range: 10.1.8.1 - 10.1.8.126
+Router: 10.1.8.126    IPs defined: 66    IPs used: 58    IPs free: 8
+
+Location: 4th Floor Lands Building    Subnet: 10.1.9.128
+Netmask: 255.255.255.128    IP range: 10.1.9.129 - 10.1.9.254
+Router: 10.1.9.254    IPs defined: 96    IPs used: 44    IPs free: 52
+
+Location: 5th Floor Lands Building    Subnet: 10.1.9.0
+Netmask: 255.255.255.128    IP range: 10.1.9.1 - 10.1.9.126
+Router: 10.1.9.126    IPs defined: 27    IPs used: 15    IPs free: 12
+
+Location: 6th Floor Lands Building    Subnet: 10.1.10.128
+Netmask: 255.255.255.128    IP range: 10.1.10.129 - 10.1.10.254
+Router: 10.1.10.254    IPs defined: 34    IPs used: 21    IPs free: 13
+
+Location: 7th Floor Lands Building    Subnet: 10.1.10.0
+Netmask: 255.255.255.128    IP range: 10.1.10.1 - 10.1.10.126
+Router: 10.1.10.126    IPs defined: 73    IPs used: 62    IPs free: 11
+
+Location: 8th Floor Lands Building    Subnet: 10.1.11.0
+Netmask: 255.255.255.128    IP range: 10.1.11.1 - 10.1.11.126
+Router: 10.1.11.126    IPs defined: 116    IPs used: 57    IPs free: 59
+
+Location: LND 8th - Server subnet    Subnet: 10.1.11.128
+Netmask: 255.255.255.128    IP range: 10.1.11.129 - 10.1.11.254
+Router: 10.1.11.254    IPs defined: 55    IPs used: 18    IPs free: 37
+
+Location: 9th Floor Lands Building    Subnet: 10.1.13.0
+Netmask: 255.255.255.0    IP range: 10.1.13.1 - 10.1.13.254
+Router: 10.1.13.254    IPs defined: 201    IPs used: 72    IPs free: 129
+
+Location: Ministers Office    Subnet: 10.1.12.224</a>
+Netmask: 255.255.255.224    IP range: 10.1.12.225 - 10.1.12.254
+Router: 10.1.12.254    IPs defined: 13    IPs used: 1    IPs free: 12
+
+Location: Marine Board Building 130 subnet
+Subnet: <u href=dhcp_subnet.cgi?subnet=10.1.130.0>10.1.130.0</a>
+Netmask: 255.255.255.0    IP range: 10.1.130.1 - 10.1.130.254
+Router: 10.1.130.1    IPs defined: 114    IPs used: 111    IPs free: 3
+
+Location: Marine Board Building 131 subnet    Subnet: 10.1.131.0
+Netmask: 255.255.255.0    IP range: 10.1.131.1 - 10.1.131.254
+Router: 10.1.131.1    IPs defined: 183    IPs used: 47    IPs free: 136
+
+Location: BSB - 19 Brisbane St Ltn    Subnet: 10.1.132.128
+Netmask: 255.255.255.192    IP range: 10.1.132.129 - 10.1.132.190
+Router: 10.1.132.129    IPs defined: 41    IPs used: 17    IPs free: 24
+
+Location: New Town    Subnet: 10.1.133.0    Netmask: 255.255.255.0
+IP range: 10.1.133.1 - 10.1.133.254    Router: 10.1.133.1    IPs defined: 181
+IPs used: 84    IPs free: 97
+
+Location: Mt Plesant / Prospect 136 Subnet    Subnet: 10.1.136.0
+Netmask: 255.255.255.0    IP range: 10.1.136.1 - 10.1.136.254
+Router: 10.1.136.1    IPs defined: 168    IPs used: 155    IPs free: 13
+
+Location: Devonport - Stony Rise    Subnet: 10.1.139.0
+Netmask: 255.255.255.0    IP range: 10.1.139.1 - 10.1.139.254
+Router: 10.1.139.1    IPs defined: 76    IPs used: 35    IPs free: 41
+
+Location: Smithton    Subnet: 10.1.142.0    Netmask: 255.255.255.224
+IP range: 10.1.142.1 - 10.1.142.30    Router: 10.1.142.1    IPs defined: 20
+IPs used: 13    IPs free: 7
+
+Location: Queenstown    Subnet: 10.1.142.32    Netmask: 255.255.255.240
+IP range: 10.1.142.33 - 10.1.142.46    Router: 10.1.142.33    IPs defined: 10
+IPs used: 2    IPs free: 8
+
+Location: St Helens    Subnet: 10.1.142.64    Netmask: 255.255.255.240
+IP range: 10.1.142.65 - 10.1.142.78    Router: 10.1.142.65    IPs defined: 6
+IPs used: 2    IPs free: 4
+
+Location: Triabunna    Subnet: 10.1.142.80    Netmask: 255.255.255.240
+IP range: 10.1.142.81 - 10.1.142.94    Router: 10.1.142.81    IPs defined: 7
+IPs used: 2    IPs free: 5
+
+Location: GeorgeTown    Subnet: 10.1.142.96    Netmask: 255.255.255.240
+IP range: 10.1.142.97 - 10.1.142.110    Router: 10.1.142.97    IPs defined: 7
+IPs used: 3    IPs free: 4
+
+Location: New Norfolk    Subnet: 10.1.142.112    Netmask: 255.255.255.240
+IP range: 10.1.142.113 - 10.1.142.126    Router: 10.1.142.113    IPs defined: 7
+IPs used: 3    IPs free: 4
+
+Location: Huonville    Subnet: 10.1.142.128    Netmask: 255.255.255.240
+IP range: 10.1.142.129 - 10.1.142.142    Router: 10.1.142.129    IPs defined: 7
+IPs used: 2    IPs free: 5
+
+Location: Oatlands    Subnet: 10.1.142.144    Netmask: 255.255.255.240
+IP range: 10.1.142.145 - 10.1.142.158    Router: 10.1.142.145    IPs defined: 8
+IPs used: 3    IPs free: 5
+
+Location: Currie King Island    Subnet: 10.1.142.160
+Netmask: 255.255.255.240    IP range: 10.1.142.161 - 10.1.142.174
+Router: 10.1.142.161    IPs defined: 6    IPs used: 2    IPs free: 4
+
+Location: Whitemark Flinders Island    Subnet: 10.1.142.176
+Netmask: 255.255.255.240    IP range: 10.1.142.177 - 10.1.142.190
+Router: 10.1.142.177    IPs defined: 7    IPs used: 2    IPs free: 5
+
+Location: Beaconsfield    Subnet: 10.1.142.192    Netmask: 255.255.255.240
+IP range: 10.1.142.193 - 10.1.142.206    Router: 10.1.142.193    IPs defined: 8
+IPs used: 2    IPs free: 6
+
+Location: Longford    Subnet: 10.1.142.208    Netmask: 255.255.255.240
+IP range: 10.1.142.209 - 10.1.142.222    Router: 10.1.142.209    IPs defined: 8
+IPs used: 2    IPs free: 6
+
+Location: Sorell    Subnet: 10.1.142.224    Netmask: 255.255.255.240
+IP range: 10.1.142.225 - 10.1.142.238    Router: 10.1.142.225
+IPs defined: 13    IPs used: 3    IPs free: 10
+
+Location: Deloraine    Subnet: 10.1.142.240    Netmask: 255.255.255.240
+IP range: 10.1.142.241 - 10.1.142.254    Router: 10.1.142.241    IPs defined: 6
+IPs used: 2    IPs free: 4
+
+Location: Scottsdale    Subnet: 10.1.143.16    Netmask: 255.255.255.240
+IP range: 10.1.143.17 - 10.1.143.30    Router: 10.1.143.17    IPs defined: 8
+IPs used: 4    IPs free: 4
+
+Location: Sheffield    Subnet: 10.1.143.32    Netmask: 255.255.255.240
+IP range: 10.1.143.33 - 10.1.143.46    Router: 10.1.143.33    IPs defined: 8
+IPs used: 2    IPs free: 6
+
+Location: Campbell Town    Subnet: 10.1.143.48    Netmask: 255.255.255.240
+IP range: 10.1.143.49 - 10.1.143.62    Router: 10.1.143.49    IPs defined: 8
+IPs used: 2    IPs free: 6
+
+[localhost]$
