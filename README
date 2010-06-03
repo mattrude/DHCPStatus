@@ -1,0 +1,112 @@
+
+                                DHCPStatus
+
+
+What is DHCPStatus ?
+====================
+DHCPStatus is a query tool for browsing information stored in DHCPD's 
+configuration and leases files, dhcpd.conf and dhcpd.leases. It correlates the 
+subnet details that you configure in the conf file with the lease records that 
+DHCPD maintains in its lease file. You can thus obtain an overall picture of 
+your DHCP environment, as well as view details of individual leases for each 
+IP.
+
+DHCPD, by the way, is a DHCP server daemon, produced by the Internet Software 
+Consortium. 
+
+DHCPStatus can be run either as a CGI script and viewed via a web browser, or 
+as a command-line tool that generates simple text output.  The CGI/web 
+interface requires that you run a CGI-capable web server on your DHCPD server 
+machine.  The command-line tool merely requires that you have a shell login on 
+the server.
+
+
+What information does DHCPStatus give you ?
+===========================================
+DHCPStatus provides information about your DHCPD environment at two levels: an 
+overall summary report, and a subnet detail report.
+
+Summary report.
+---------------
+Each row of the summary report contains information for a single subnet 
+defined in the dhcpd.conf file.  The information described for each subnet is:
+   - the subnet address
+   - netmask
+   - the range of IP addresses that fall within the subnet
+   - the router(s) for the subnet
+   - the number of IP addresses that are defined in the dynamic pool for that  
+     subnet
+   - the number of IP addresses in the dynamic pool that are in use
+   - and the number of IP addresses in the dynamic pool that are free
+
+All this information is obtained from the dhcpd.conf and dhcpd.leases files, 
+in their standard formats. In addition, if you use an extra format standard 
+for commenting each subnet in your dhcpd.conf file, this utility will find 
+those comments and include them as a "Location" field in the summary report.
+
+Subnet detail report.
+---------------------
+For each subnet that is summarised by the summary report, it is possible to 
+obtained a detailed subnet report.
+
+The information displayed in the subnet detail report includes all of the 
+information that is produced by the summary report for that subnet, as well as 
+a row of information on each IP address in the subnet. The information for 
+each IP address includes the lease status ("active", "free", or blank for IP 
+addresses not in the dynamic pool).
+
+For each active IP address, the following is displayed:
+   - the start date of the lease
+   - the end date of the lease
+   - the mac address of the interface that has the IP address lease
+   - the DNS name of the interface that has the lease (as supplied by the      
+     client)
+   - and the hostname (or WINS name, assuming the client is using WINS) of the 
+     machine that has the lease.
+
+Overall, these two reports provide a quick and easy way of summarising the 
+status of your DHCPD server (a lot easier than scanning through the 
+dhcpd.leases file manually :-)
+
+
+Requirements.
+=============
+If you want to use DHCPStatus, you'll firstly need read access to your 
+dhcpd.conf and dhcpd.leases files.  You'll also require Perl 5.003 (or later) 
+installed on your system.
+
+If you choose to run the CGI/web interface with DHCPStatus, then you'll need 
+to run a web server on your DHCPD server.  The userid that the web server runs 
+as will need read access to your dhcpd.conf and dhcpd.leases files.  
+Alternatively, if you want to use the web interface but don't want to install 
+a web server on your DHCPD server, then you could run the CGI script from 
+another machine that had access to the dhcpd.conf and dhcpd.leases files via, 
+say, an NFS mount.
+
+There are no pre-requisites for the command-line interface to DHCPStatus 
+(other than, obviously, Perl and read access to your DHCPD files).  The 
+command-line version assumes that your terminal display width is 80 characters 
+(you can easily change this width value in a .ini file).  However, if you have 
+the Perl Term::ReadKey package installed on your system, DHCPStatus will use 
+it to determine your screen width (see 
+http://search.cpan.org/search?dist=TermReadKey).
+
+
+Installation.
+=============
+See the INSTALL file.
+
+
+License.
+========
+DHCPStatus is freely available under the terms of the GNU General Public 
+License.  However, if you find this product useful and wish to offer 
+appreciation for it, then please make a contribution to your local animal 
+welfare society.
+
+
+The Author.
+===========
+DHCPStatus was written by Michael Grubits.  Please send all 
+criticism/praise/patches/change requests/offers of telecommuting 
+employment/etc. to mjtg@users.sourceforge.net.
