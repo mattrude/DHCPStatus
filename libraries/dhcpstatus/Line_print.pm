@@ -105,7 +105,7 @@ sub flush {
       print("$buffer\n");
       $lp->{BUFFER} = "";
    }
-   print("\n");
+#   print("\n");
 }
 
 1;

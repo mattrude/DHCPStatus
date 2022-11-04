@@ -73,11 +73,19 @@ sub title {
 }
 
 sub conf_file {
+   if (defined($ENV{"DHCPD_CONF"})) {
+       # export DHCPD_CONF="/tmp/dhcpd.conf"
+       return $ENV{"DHCPD_CONF"};
+   }
    my $env = shift;
    return($env->{CONF_FILE});
 }
 
 sub leases_file {
+   if (defined($ENV{"DHCPD_LEASES"})) {
+       # export DHCPD_LEASES="/tmp/dhcpd.leases"
+       return $ENV{"DHCPD_LEASES"};
+   }
    my $env = shift;
    return($env->{LEASES_FILE});
 }
