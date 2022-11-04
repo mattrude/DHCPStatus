@@ -56,7 +56,7 @@ sub ip {
 # used to convert a date and a time string to epoch time.
 #
 sub _lease_time {
-   require('timelocal.pl');
+   use Time::Local qw(timegm);
    my $yyyymmdd = shift;
    my $hhiiss = shift;
    my ($yyyy, $mm, $dd, $hh, $ii, $ss);
@@ -136,7 +136,7 @@ sub abandoned {
 sub ended {
    my $lease = shift;
    return(0) if $lease->ends eq "Never";
-   return(1) if time() > $lease->ends;
+   return(1) if oldtimer() > $lease->ends;
    return(0);
 }
 

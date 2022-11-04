@@ -342,4 +342,24 @@ sub usage {
    warn("Usage: $cmd[$#cmd] \[-s subnet-id\]\n");
 }
 
+#--------------------------------------------------------------------------
+# for oldtimer analyzing
+#
+sub oldtimer {
+   use Time::Local qw(timegm);
+   my $unixtime;
+   if (defined($ENV{"DHCPD_TIMER"})) {
+      # export DHCPD_TIMER="2022/02/02 02:02:02"
+      my ($yyyymmdd, $hhiiss, $yyyy, $mm, $dd, $hh, $ii, $ss);
+      ($yyyymmdd, $hhiiss) = split(/ /, $ENV{"DHCPD_TIMER"});
+      ($yyyy, $mm, $dd) = split(/\//, $yyyymmdd);
+      ($hh, $ii, $ss) = split(/:/, $hhiiss);
+      $mm--;
+      $unixtime = timegm($ss, $ii, $hh, $dd, $mm, $yyyy);
+   } else {
+      $unixtime = time();
+   }
+   return($unixtime);
+}
+
 1;

@@ -23,7 +23,7 @@
 # epoch time.
 #
 sub lease_time {
-   require('timelocal.pl');
+   use Time::Local qw(timegm);
    my $yyyymmdd = shift;
    my $hhiiss = shift;
    my ($yyyy, $mm, $dd, $hh, $ii, $ss);
@@ -55,9 +55,9 @@ LEASE:
 LEASE_PARM:
       while ($_[0] ne "}") {
          if (($_[0] eq "ends") && ($_[1] ne "never")) {
-            if (&lease_time($_[2], $_[3]) < time()) {	# if the lease has
-               while (shift ne "}") {}			# ended, we're not
-               next LEASE;				# interested.
+            if (&lease_time($_[2], $_[3]) < oldtimer()) {	# if the lease has
+               while (shift ne "}") {}				# ended, we're not
+               next LEASE;					# interested.
             }
          }
          if (($_[0] eq "abandoned")		# ditto for abandoned leases.
