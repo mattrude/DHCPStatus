@@ -56,7 +56,8 @@ sub ip {
 # used to convert a date and a time string to epoch time.
 #
 sub _lease_time {
-   require('timelocal.pl');
+	#require('timelocal.pl');
+   use Time::Local;
    my $yyyymmdd = shift;
    my $hhiiss = shift;
    my ($yyyy, $mm, $dd, $hh, $ii, $ss);

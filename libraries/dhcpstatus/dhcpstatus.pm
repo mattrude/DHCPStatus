@@ -23,7 +23,8 @@
 # epoch time.
 #
 sub lease_time {
-   require('timelocal.pl');
+	#require('timelocal.pl');
+   use Time::Local;
    my $yyyymmdd = shift;
    my $hhiiss = shift;
    my ($yyyy, $mm, $dd, $hh, $ii, $ss);
