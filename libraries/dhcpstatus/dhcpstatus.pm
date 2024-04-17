@@ -47,7 +47,15 @@ sub get_active_lease_ips {
 LEASE:
    while (@_) {
       if ($_[0] ne "lease") {		# ignore anything that isn't a lease.
-         while (shift ne "}") {}
+
+#int isc-dhcp server add new construction, like
+#server-duid "eqweqweqweq";
+#in alias file, this patch should fix issue with "undefine var in line 53 in dhcpstatus.pm"
+
+	 $array_item = shift;
+         while ($array_item ne "}" && $array_item ne ";") {
+                $array_item = shift;
+         }
          next LEASE;
       }
       shift;			# move past the "lease" keyword.
